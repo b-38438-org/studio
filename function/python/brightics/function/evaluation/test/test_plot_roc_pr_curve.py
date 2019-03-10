@@ -1,12 +1,12 @@
 import unittest
-import pandas
 from brightics.function.evaluation import plot_roc_pr_curve
+from brightics.common.datasets import load_dataset
 
 
 class TestPlotROCPRCurve(unittest.TestCase):
     def setUp(self):
         print("*** Plot ROC PR Curve UnitTest Start ***")
-        self.input_dataframe = pandas.read_csv("sample_plot_roc.csv")
+        self.input_dataframe = load_dataset("iris_plot_roc")
 
     def tearDown(self):
         print("*** Plot ROC PR Curve UnitTest End ***")
